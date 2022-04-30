@@ -1,11 +1,11 @@
 <template>
   <div class="mb-16 flex w-full flex-col items-center justify-center space-y-4">
-    <label for="searchField" class="block font-mono text-3xl font-extralight">
+    <label for="searchField" class="block font-mono text-2xl font-extralight">
       Search for a manual
     </label>
     <input
       v-model="searchInput"
-      class="w-7/8 block h-12 rounded-2xl border-4 px-4 py-8 font-mono text-2xl caret-black"
+      class="sm:w-11/12 w-7/8 block h-12 rounded-2xl border-4 px-4 py-8 font-mono text-2xl caret-black"
       name="searchField"
       type="text"
       placeholder="Enter text"
