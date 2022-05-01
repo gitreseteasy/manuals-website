@@ -5,7 +5,7 @@
     </label>
     <input
       v-model="searchInput"
-      class="sm:w-11/12 w-7/8 block h-12 rounded-2xl border-4 px-4 py-8 font-mono text-2xl caret-black"
+      class="w-7/8 block h-12 rounded-2xl border-4 px-4 py-8 font-mono text-2xl caret-black sm:w-11/12"
       name="searchField"
       type="text"
       placeholder="Enter text"
@@ -27,7 +27,7 @@ import { Options, Vue } from 'vue-class-component';
 export default class SearchPage extends Vue {
   searchInput = '';
 
-  submitSearch(input: string) {
+  submitSearch(input: string): void {
     console.log(`submit search for ${input}`);
   }
 }
