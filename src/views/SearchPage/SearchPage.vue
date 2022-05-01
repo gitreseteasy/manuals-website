@@ -9,11 +9,12 @@
       name="searchField"
       type="text"
       placeholder="Enter text"
-      aria-label="search input"
+      aria-label="search input text field"
     />
     <button
       class="rounded-2xl border-4 border-white bg-black p-4 font-mono text-2xl text-white hover:border-4 hover:border-black hover:bg-white hover:text-black"
-      aria-label="submit search"
+      aria-label="submit search and to search results"
+      role="link"
       @click="submitSearch(searchInput)"
     >
       Submit search
@@ -29,6 +30,7 @@ export default class SearchPage extends Vue {
 
   submitSearch(input: string): void {
     console.log(`submit search for ${input}`);
+    this.$router.push({ name: 'SearchResults' });
   }
 }
 </script>

@@ -1,11 +1,16 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
-import { SearchPage } from '@/views';
+import { SearchPage, SearchResultsPage } from '@/views';
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
     component: SearchPage
+  },
+  {
+    path: '/search-results',
+    name: 'SearchResults',
+    component: SearchResultsPage
   }
 ];
 
