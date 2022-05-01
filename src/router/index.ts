@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
-import SearchPage from '@/views/SearchPage.vue';
+import { SearchPage } from '@/views';
 
 const routes: Array<RouteRecordRaw> = [
   {

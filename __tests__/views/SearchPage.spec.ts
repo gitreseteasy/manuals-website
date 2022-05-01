@@ -1,5 +1,5 @@
 import { mount, VueWrapper } from "@vue/test-utils";
-import SearchPage from "@/views/SearchPage.vue";
+import {SearchPage} from "@/views";
 import faker from "@faker-js/faker";
 
 describe('SearchPage', () => {
