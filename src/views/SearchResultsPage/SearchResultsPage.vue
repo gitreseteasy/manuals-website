@@ -44,7 +44,7 @@ export default class SearchResultsPage extends Vue {
   results: Array<SearchResultModel> = [];
 
   get resultsWithViewCopy(): Array<SearchResultModel> {
-    return this.results.map((resultItem, resultIndex) => {
+    return this.results.map((resultItem) => {
       return {
         ...resultItem,
         created_at: formatDateForResultsPage(resultItem.created_at)
