@@ -1,5 +1,4 @@
 import { mount, VueWrapper } from "@vue/test-utils";
-import {Router} from "vue-router";
 import {SearchPage} from "@/views";
 import faker from "@faker-js/faker";
 
