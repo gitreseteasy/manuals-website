@@ -9,7 +9,7 @@
             <th>Title</th>
             <th>Author</th>
             <th>Contributor</th>
-            <th>Creation Date</th>
+            <th class="sm:text-sm">Creation Date</th>
           </tr>
           <template v-if="resultsWithViewCopy.length">
             <tr
@@ -38,13 +38,15 @@
 import { Options, Vue } from 'vue-class-component';
 import { SearchResultModel } from '@/models';
 import { formatDateForResultsPage } from '@/helpers';
+import { useSearchResultsStore } from '@/stores/search-results.store';
 
 @Options({})
 export default class SearchResultsPage extends Vue {
-  results: Array<SearchResultModel> = [];
+  results!: Array<SearchResultModel>;
+  searchResultsStore = useSearchResultsStore();
 
   get resultsWithViewCopy(): Array<SearchResultModel> {
-    return this.results.map((resultItem) => {
+    return this.searchResultsStore.results.map((resultItem: SearchResultModel) => {
       return {
         ...resultItem,
         created_at: formatDateForResultsPage(resultItem.created_at)
