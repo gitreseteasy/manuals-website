@@ -1,5 +1,4 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
-import { SearchPage, SearchResultsPage } from '@/views';
+import { createRouter, createWebHistory } from 'vue-router';
 import { routes } from './routes';
 
 const router = createRouter({
