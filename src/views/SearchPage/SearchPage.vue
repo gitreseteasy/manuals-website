@@ -29,7 +29,6 @@ export default class SearchPage extends Vue {
   searchInput = '';
 
   submitSearch(input: string): void {
-    console.log(`submit search for ${input}`);
     this.$router.push({ name: 'SearchResults' });
   }
 }
