@@ -1,9 +1,16 @@
 import { mount, VueWrapper } from "@vue/test-utils";
-import SearchPage from "@/views/SearchPage.vue";
+import {SearchPage} from "@/views";
 import faker from "@faker-js/faker";
 
 describe('SearchPage', () => {
-  const wrapper = mount(SearchPage, {});
+  const wrapper = mount(SearchPage, {
+    global: {
+      mocks: {
+        $route: {params: {}},
+        $router: {push: jest.fn()}
+      }
+    }
+  });
   describe('component', () => {
     it('should mount properly without exploding', () => {
       expect(wrapper).toBeInstanceOf(VueWrapper);
